@@ -1,7 +1,18 @@
-export default function HomePage() {
+import { NextPage, GetStaticProps } from "next";
+import { Layout } from "../components/layouts";
+
+const HomePage: NextPage = (props) => {
   return (
-    <>
-      <h1>Hola mundo</h1>
-    </>
+    <Layout title="Listado de pokemons">
+      <ul></ul>
+    </Layout>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {},
+  };
+};
+
+export default HomePage;
